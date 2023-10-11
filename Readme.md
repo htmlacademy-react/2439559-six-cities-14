@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов»
 
 * Студент: [Николай Васильев](https://up.htmlacademy.ru/react/14/user/2439559).
-* Наставник: [Вероника Синицына](https://htmlacademy.ru/profile/id118601).
+* Наставник: Вероника Синицына (https://htmlacademy.ru/profile/id118601).
 
 ---
 
