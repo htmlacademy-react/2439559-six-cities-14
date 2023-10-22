@@ -6,7 +6,7 @@ type PrivetRouteProps = {
     children: JSX.Element
 }
 
- export default function PrivetRoute(props: PrivetRouteProps): JSX.Element {
+ export default function PrivateRoute(props: PrivetRouteProps): JSX.Element {
     const {authorizationStatus, children} = props;
 
     return (

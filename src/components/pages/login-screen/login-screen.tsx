@@ -1,9 +1,4 @@
-type LoginPasswordProps = {
-  email: string,
-  password: string;
-};
-
-export default function LoginPassword({ email, password }: LoginPasswordProps): JSX.Element {
+export default function LoginPassword(): JSX.Element {
   return (
     <div className="page page--gray page--login">
       <header className="header">
@@ -30,7 +25,7 @@ export default function LoginPassword({ email, password }: LoginPasswordProps): 
             <h1 className="login__title">Sign in</h1>
             <form className="login__form form" action="#" method="post">
               <div className="login__input-wrapper form__input-wrapper">
-                <label className="visually-hidden">{email}</label>
+                <label className="visually-hidden">E-mail</label>
                 <input
                   className="login__input form__input"
                   type="email"
@@ -40,7 +35,7 @@ export default function LoginPassword({ email, password }: LoginPasswordProps): 
                 />
               </div>
               <div className="login__input-wrapper form__input-wrapper">
-                <label className="visually-hidden">{password}</label>
+                <label className="visually-hidden">Password</label>
                 <input
                   className="login__input form__input"
                   type="password"
