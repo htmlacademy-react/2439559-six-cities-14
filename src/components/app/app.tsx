@@ -12,25 +12,24 @@ type MainScreenProps = {
   sum: number;
 };
 
-
-export default function App({ sum }: MainScreenProps) : JSX.Element{
+export default function App({ sum }: MainScreenProps): JSX.Element {
   return (
     <BrowserRouter>
-        <Routes>
-            <Route path={AppRoute.Root} element = { <MainScreen sum={ sum } /> } >
-              <Route path={AppRoute.Error404} element = { <NotFoundScreen /> } />
-              <Route path={AppRoute.Login} element = { <LoginPassword /> } />
-              <Route path={AppRoute.Favorites} element = { 
-                <PrivateRoute
-                    authorizationStatus={AuthorizationStatus.NoAuth}  
-                  >
-                    <FavoritesScreen/> 
-                </PrivateRoute>
-                  }
-                />
-              <Route path={AppRoute.Offer} element = { <OfferScreen /> } />
-            </Route>
-        </Routes>
+      <Routes>
+        <Route path={AppRoute.Root} element={<MainScreen sum={sum} />}>
+          <Route path={AppRoute.Error404} element={<NotFoundScreen />} />
+          <Route path={AppRoute.Login} element={<LoginPassword />} />
+          <Route
+            path={AppRoute.Favorites}
+            element={
+              <PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}>
+                <FavoritesScreen />
+              </PrivateRoute>
+            }
+          />
+          <Route path={AppRoute.Offer} element={<OfferScreen />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
-  ); 
+  );
 }
