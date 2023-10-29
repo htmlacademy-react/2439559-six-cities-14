@@ -19,8 +19,7 @@ export default function App({ sum }: MainScreenProps): JSX.Element {
         <Route path={AppRoute.Root} element={<MainScreen sum={sum} />}>
           <Route path={AppRoute.Error404} element={<NotFoundScreen />} />
           <Route path={AppRoute.Login} element={<LoginPassword />} />
-          <Route
-            path={AppRoute.Favorites}
+          <Route path={AppRoute.Favorites}
             element={
               <PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}>
                 <FavoritesScreen />
