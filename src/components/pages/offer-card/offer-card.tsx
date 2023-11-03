@@ -1,7 +1,7 @@
 import { offersCityCard } from '../../../mocks/offers';
 import { Offers } from '../../../types/types';
 
-export function OfferCard({ img, price, title, type }: Offers): JSX.Element {
+export function OfferCard({ img, price, title, type, rating }: Offers): JSX.Element {
   return (
     <article className="cities__card place-card">
       <div className="place-card__mark">
@@ -35,7 +35,7 @@ export function OfferCard({ img, price, title, type }: Offers): JSX.Element {
         <div className="place-card__rating rating">
           <div className="place-card__stars rating__stars">
             <span style={{ width: '80%' }}></span>
-            <span className="visually-hidden">Rating</span>
+            <span className="visually-hidden">{rating}</span>
           </div>
         </div>
         <h2 className="place-card__name">

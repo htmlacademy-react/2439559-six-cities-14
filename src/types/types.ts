@@ -1,5 +1,5 @@
 export type Offers = {
-    img: string[],
+    img: string,
     isPremium: boolean,
     price: number,
     title: string,
