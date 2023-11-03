@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './components/app/app';
-import { offersCityCard } from './mocks/offers';
+import App from './app/app';
+import { offersCityCard } from './mocks/mocks';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,7 +15,6 @@ const settings = {
 
 root.render(
   <React.StrictMode>
-    <App sum={settings.sum} />
-    <App offers = {offersCityCard}/>
+    <App offers={offersCityCard} />
   </React.StrictMode>
 );
