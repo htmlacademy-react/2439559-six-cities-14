@@ -1,9 +1,8 @@
 import { Offer } from '../types/offer';
-import { DESCRIPTIONS, CITIES, IMAGES, TYPES } from '../const';
+import { DESCRIPTIONS, CITIES, IMAGES, TYPES, TITLES } from '../const';
 
-export function offersCityCard({}: Offer): JSX.Element {
-  return [
-    {
+export function OffersCityCard({}: Offer): JSX.Element {
+  return {
       bedrooms: 3,
       city: {
         location: {
@@ -34,8 +33,7 @@ export function offersCityCard({}: Offer): JSX.Element {
       previewImage: 'img/1.png', // Здесь те же самые картинки вставлять?
       price: 120,
       rating: 4.8,
-      title: 'Beautiful & luxurious studio at great location',
+      title: { TITLES },
       type: { TYPES },
-    },
-  ];
+  }
 }

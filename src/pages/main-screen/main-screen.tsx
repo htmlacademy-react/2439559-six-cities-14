@@ -1,11 +1,12 @@
 import Header from "../../components/header/header";
-import OfferList from "../../components/offers-list/offersList";
+import OffersList from "../../components/offers-list/offersList";
+import { Offer } from "../../types/offer";
 
 type MainScreenProps = {
-  sum: number;
+  offers: Offer[];
 };
 
-export default function MainScreen({ sum }: MainScreenProps): JSX.Element {
+export default function MainScreen({ Offers }: MainScreenProps): JSX.Element {
   return (
     <div className="page page--gray page--main">
       <Header />
@@ -50,7 +51,7 @@ export default function MainScreen({ sum }: MainScreenProps): JSX.Element {
         </div>
         <div className="cities">
           <div className="cities__places-container container">
-      <OfferList sum={sum}/>
+      <OffersList offers={Offers}/>
             <div className="cities__right-section">
               <section className="cities__map map"></section>
             </div>
