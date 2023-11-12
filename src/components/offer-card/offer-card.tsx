@@ -1,14 +1,14 @@
-import { OffersCityCard } from '../../mocks/mocks';
-import { Offer } from '../../types/offer';
+// import { offers } from '../../mocks/mocks';
+import { OfferListItem } from '../../types/offer';
 
 export function OfferCard ({
-  images,
+  previewImage,
   price,
   title,
   type,
   rating,
   isPremium,
-}: Offer): JSX.Element {
+}: OfferListItem): JSX.Element {
   return (
     <article className="cities__card place-card">
       <div className="place-card__mark">
@@ -18,7 +18,7 @@ export function OfferCard ({
         <a href="#">
           <img
             className="place-card__image"
-            src={images} // Здесь картинка
+            src={previewImage} // Здесь картинка
             width="260"
             height="200"
             alt="Place image"

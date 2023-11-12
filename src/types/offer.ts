@@ -1,36 +1,23 @@
 type Location = {
-  latitude: number,
-  longitude: number,
-  zoom: number;
-}
-
-type Host = {
-  avatarUrl: string
-  id: number
-  isPro: boolean
-  name: string
-}
+  latitude: number
+  longitude: number
+  zoom: number
+  }
 
 type City = {
-  location: Location
   name: string
+  location: Location
 }
 
-export type Offer = {
-    bedrooms: number
-    city: City
-    description: string
-    goods: [string]
-    host: Host
-    id: number
-    images: [string]
-    isFavorite: boolean
-    isPremium: boolean
-    location: Location
-    maxAdults: number
-    previewImage: string
-    price: number
-    rating: number
-    title: string
-    type: string
-  };
+export type OfferListItem = {
+  id: string
+  title: string
+  type: string
+  price: number
+  city: City
+  location: Location
+  isFavorite: boolean
+  isPremium: boolean
+  rating: number
+  previewImage: string
+};

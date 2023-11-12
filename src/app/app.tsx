@@ -7,16 +7,17 @@ import OfferScreen from '../pages/offer-screen/offer-screen';
 import NotFoundScreen from '../pages/not-found-screen/not-found-screen';
 import { AppRoute, AuthorizationStatus } from '../const';
 import PrivateRoute from '../components/private-route/private-route';
+import { OfferListItem } from '../types/offer';
 
-type MainScreenProps = {
-  sum: number;
-};
+type AppsListProps = {
+    offers: OfferListItem[];
+  }
 
-export default function App({ sum }: MainScreenProps): JSX.Element {
+export default function App({ offers }: AppsListProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={AppRoute.Root} element={<MainScreen sum={sum} />}>
+        <Route path={AppRoute.Root} element={<MainScreen offers={offers} />}>
           <Route path={AppRoute.Error404} element={<NotFoundScreen />} />
           <Route path={AppRoute.Login} element={<LoginPassword />} />
           <Route
