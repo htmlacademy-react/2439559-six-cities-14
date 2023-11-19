@@ -1,9 +1,9 @@
 import Header from "../../components/header/header";
 import OffersList from "../../components/offers-list/offersList";
-import { Offer } from "../../types/offer";
+import { OfferListItem } from "../../types/offer";
 
 type MainScreenProps = {
-  offers: Offer[];
+  Offers: OfferListItem[];
 };
 
 export default function MainScreen({ Offers }: MainScreenProps): JSX.Element {

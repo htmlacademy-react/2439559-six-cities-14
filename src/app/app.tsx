@@ -17,7 +17,7 @@ export default function App({ offers }: AppsListProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={AppRoute.Root} element={<MainScreen offers={offers} />}>
+        <Route path={AppRoute.Root} element={<MainScreen Offers={offers} />}>
           <Route path={AppRoute.Error404} element={<NotFoundScreen />} />
           <Route path={AppRoute.Login} element={<LoginPassword />} />
           <Route
