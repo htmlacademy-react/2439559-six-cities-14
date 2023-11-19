@@ -1,6 +1,7 @@
 import Header from "../../components/header/header";
+import { offers } from "../../mocks/mocks";
 
-export default function FavoritesScreen(): JSX.Element {
+export default function FavoritesScreen({ offers: string }): JSX.Element {
   return (
     <div className="page">
       <Header />
@@ -14,7 +15,7 @@ export default function FavoritesScreen(): JSX.Element {
                 <div className="favorites__locations locations locations--current">
                   <div className="locations__item">
                     <a className="locations__item-link" href="#">
-                      <span>Amsterdam</span>
+                      <span><offers {...props} /></span>
                     </a>
                   </div>
                 </div>
